@@ -24,14 +24,16 @@ const RandomJokes: FC = () => {
 
     useEffect(() => {
         generateRandomJokes()
-    },[])
+    }, [])
 
     return (
         <Theme title='Random Jokes' style={{ "width": "50vw" }}>
             {loading && <div>Loading....</div>}
-            {!loading && jokes && <div className='p-4 fs-3'>
-                "{jokes}"
-            </div>}
+            <div className="mb-3">
+                {!loading && jokes && <div className='p-4 fs-4'>
+                    "{jokes}"
+                </div>}
+            </div>
             <button className='btn btn-primary rounded-pill' onClick={generateRandomJokes}>New Jokes</button>
         </Theme>
     )
