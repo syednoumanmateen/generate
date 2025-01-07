@@ -1,0 +1,35 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
+}
+
+.item {
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 12px;
+  text-align: center;
+  background: #000;
+  color:#fff;
+  visibility:hidden;
+  padding:10px 0 0 0;
+}
+
+.item:hover .description{
+  visibility: visible;
+}
